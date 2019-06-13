@@ -1,0 +1,65 @@
+\ProvidesPackage{padrao_logica}
+
+% NOTES
+
+% You cab convert the factsheet to Microsoft word format using pandoc:
+%
+% pandoc --filter pandoc-citeproc --bibliography=biblio.bib -s uog_factsheet.tex -o paper.docx
+%
+% You may have to install pandoc-citeproc. On Ubuntu use:
+% sudo apt-get install pandoc-citeproc
+
+%Manipular IP de origem antes de enviar - Spoofing - para que a vítima acredite que a fonte é confiável.
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[tmargin=0.5in,bmargin=0.5in, lmargin=0.5in, rmargin=0.5in]{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+% Following line defines the Triton Green color (RGB = 4,106,56)
+%\definecolor{triton_green}{RGB}{4,106,56}
+\definecolor{triton_blue}{RGB}{4,56,106}
+
+% Set colors for hyperlinks
+\hypersetup{
+  linkcolor  = triton_blue,
+  citecolor  = triton_blue,
+  urlcolor   = triton_blue,
+  colorlinks = true,
+}
+\usepackage{breakurl}
+% Default: numerical citations
+\usepackage[numbers]{natbib}
+
+% Uncomment this lines for superscript citations instead
+% \usepackage[super]{natbib}
+
+% Uncomment these lines for author-year citations instead
+%\usepackage[round]{natbib}
+%\let\cite\citep
+
+\pagestyle{empty} % Removes headers and footers, freeing up some real estate
+
+\titlehead{
+\noindent
+\raisebox{\dimexpr.8\baselineskip-\height}{\includegraphics[height=0.3in]{imgs/logo.png}}
+\begin{tabular}[t]{@{}l}
+  	\hspace{0.25in}\large \textbf{Lógica Sistemas LTDA} \\
+\end{tabular}
+\hfill
+\hrule
+}
+
+\newcommand{\blurb}{
+	\begin{footnotesize}
+	\vspace{0.1in}\hrule\vspace{0.1in} 
+    Somos uma empresa constituída em 2007 e nosso foco principal é desenvolver sistemas para o mercado de telecomunicações. Começamos atendendo aos provedores parceiros da Cabo Natal no ano de 2006 e neste mesmo ano veio nosso segundo cliente também parceiro da Cabo Natal. Ainda em 2007 começamos a atender provedores de acesso sem fio, embora ainda não possuíamos integração com RouterOS. Nessa época toda a autenticação, controle de banda, bloqueios, etc... era realizada por um servidor Linux Debian. Foi à partir daí que decidimos constituir uma empresa. Possuíamos em torno de 15 clientes e percebemos a carência do mercado de telecomunicações. Em 2008 desenvolvemos a integração com RouterOS via radius e começamos a ultrapassar as fronteiras do Rio Grande do Norte, atingindo o estados da Paraíba, Ceará e Pernambuco. Começamos a desenvolver a nota fiscal do convênio 115. A primeira versão da nota fiscal somente tratava o SCM (Serviço Comunicação Multimidia). Em 2010 participamos da nossa primeira feira a nível Nacional, a feira da Abrint e começamos a expansão além da região Nordeste do Brasil, surgem os primeiros clientes no estado de São Paulo e Rio de Janeiro. A expansão inciada em 2010 resultou na contratação de mais programadores e começamos a desenvolver uma solução totalmente parametrizada e que atendesse o mercado que está por vir: o de TVs a cabo. Com o aumento da equipe investimos em formas de distribuir o código de forma automática, controlar as versões, atualizar o banco de dados dos clientes e centralizar o código. Com a expansão em mente, estamos investindo na melhoria do sistema e intensificando o relacionamento com o cliente. A Lógica Sistemas agradece pelo seu tempo! Visite nosso site em: \href{http://www.logicasistemas.com.br}{http://www.logicasistemas.com.br}. 
+    %Source files are  at \href{\sourceURL}{\sourceURL}.
+	\vspace{0.1in}\hrule\vspace{0.1in}
+ %       Este documento foi elaborado em {\createdOn} e foi atualizado pela última vez em {\today}.
+   	\vspace{0.1in}\hrule\vspace{0.1in}
+    \end{footnotesize}
+}
